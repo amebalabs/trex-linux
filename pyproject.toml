@@ -1,14 +1,13 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=69.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "trex-linux"
-version = "1.0.0"
+version = "1.0.1"
 description = "Lightning-fast OCR tool for Wayland/Linux. Tesseract by default, with optional AI-powered mode."
 readme = "README.md"
 requires-python = ">=3.8"
-license = { text = "MIT" }
 authors = [{ name = "amebalabs", email = "team@amebalabs.com" }]
 keywords = [
     "ocr",
@@ -25,6 +24,7 @@ classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: Console",
     "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
     "Operating System :: POSIX :: Linux",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
@@ -65,9 +65,6 @@ Homepage = "https://github.com/amebalabs/trex-linux"
 Repository = "https://github.com/amebalabs/trex-linux"
 Issues = "https://github.com/amebalabs/trex-linux/issues"
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["trex*"]
 
 [tool.black]
 line-length = 88
@@ -92,6 +89,14 @@ no_implicit_optional = true
 warn_redundant_casts = true
 warn_unused_ignores = true
 warn_no_return = true
+
+
+[tool.setuptools]
+license-files = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["trex*"]
 
 [tool.uv]
 extra-index-url = ["https://download.pytorch.org/whl/cpu"]
