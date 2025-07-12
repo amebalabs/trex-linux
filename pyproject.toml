@@ -1,0 +1,97 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trex-linux"
+version = "1.0.0"
+description = "Lightning-fast OCR tool for Wayland/Linux. Tesseract by default, with optional AI-powered mode."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "amebalabs", email = "team@amebalabs.com" }]
+keywords = [
+    "ocr",
+    "tesseract",
+    "easyocr",
+    "wayland",
+    "linux",
+    "screenshot",
+    "text-recognition",
+    "fast-ocr",
+    "clipboard",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Text Processing",
+    "Topic :: Utilities",
+    "Environment :: X11 Applications",
+    "Environment :: GPU",
+]
+
+dependencies = ["click>=8.0", "Pillow>=9.0", "numpy>=1.19.0"]
+
+[project.optional-dependencies]
+accurate = [
+    "easyocr>=1.7.0",
+    "opencv-python>=4.5",
+    "torch>=1.9.0",
+    "torchvision>=0.10.0",
+]
+gpu = ["torch>=1.9.0", "torchvision>=0.10.0"]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=22.0",
+    "flake8>=5.0",
+    "mypy>=0.990",
+    "pre-commit>=2.20",
+]
+
+[project.scripts]
+trex = "trex.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/amebalabs/trex-linux"
+Repository = "https://github.com/amebalabs/trex-linux"
+Issues = "https://github.com/amebalabs/trex-linux/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["trex*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+addopts = "-v --cov=trex --cov-report=term-missing"
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+
+[tool.uv]
+extra-index-url = ["https://download.pytorch.org/whl/cpu"]
