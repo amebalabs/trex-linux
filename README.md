@@ -3,19 +3,10 @@
 [![PyPI version](https://badge.fury.io/py/trex-linux.svg)](https://badge.fury.io/py/trex-linux)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub](https://img.shields.io/badge/GitHub-amebalabs%2Ftrex--linux-black?logo=github)](https://github.com/amebalabs/trex-linux)
-[![Platform: Linux](https://img.shields.io/badge/platform-Linux-lightgrey.svg)](https://www.linux.org/)
 [![Arch Linux](https://img.shields.io/badge/Arch%20Linux-1793D1?logo=arch-linux&logoColor=fff)](https://archlinux.org/)
 [![Wayland](https://img.shields.io/badge/Wayland-Native-orange.svg)](https://wayland.freedesktop.org/)
 
 Lightning-fast OCR tool optimized for Wayland/Hyprland on Arch Linux. Select screen area → Extract text → Copy to clipboard.
-
-<p align="center">
-  <img src="https://img.shields.io/badge/OCR-Tesseract-green?style=for-the-badge" alt="OCR: Tesseract">
-  <img src="https://img.shields.io/badge/OCR-EasyOCR-purple?style=for-the-badge" alt="OCR: EasyOCR">
-  <img src="https://img.shields.io/badge/Speed-Lightning%20Fast-yellow?style=for-the-badge" alt="Speed: Lightning Fast">
-  <img src="https://img.shields.io/badge/GPU-CUDA%20Ready-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="GPU: CUDA Ready">
-</p>
 
 ## Features
 
