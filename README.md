@@ -2,11 +2,9 @@
 
 [![PyPI version](https://badge.fury.io/py/trex-ocr.svg)](https://badge.fury.io/py/trex-ocr)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub](https://img.shields.io/badge/GitHub-amebalabs%2Ftrex--linux-black?logo=github)](https://github.com/amebalabs/trex-ocr)
-[![Platform: Linux](https://img.shields.io/badge/platform-Linux-lightgrey.svg)](https://www.linux.org/)
 [![Arch Linux](https://img.shields.io/badge/Arch%20Linux-1793D1?logo=arch-linux&logoColor=fff)](https://archlinux.org/)
 [![Wayland](https://img.shields.io/badge/Wayland-Native-orange.svg)](https://wayland.freedesktop.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Lightning-fast OCR and QR code reader for Wayland/Hyprland on Arch Linux. Select screen area → Extract text or decode QR → Copy to clipboard.
 
