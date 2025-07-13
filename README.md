@@ -8,7 +8,7 @@
 [![Arch Linux](https://img.shields.io/badge/Arch%20Linux-1793D1?logo=arch-linux&logoColor=fff)](https://archlinux.org/)
 [![Wayland](https://img.shields.io/badge/Wayland-Native-orange.svg)](https://wayland.freedesktop.org/)
 
-Lightning-fast OCR tool optimized for Wayland/Hyprland on Arch Linux. Select screen area → Extract text → Copy to clipboard.
+Lightning-fast OCR and QR code reader for Wayland/Hyprland on Arch Linux. Select screen area → Extract text or decode QR → Copy to clipboard.
 
 ## Features
 

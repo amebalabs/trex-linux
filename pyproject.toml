@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "trex-ocr"
-version = "1.0.1"
-description = "Lightning-fast OCR tool for Wayland/Linux. Tesseract by default, with optional AI-powered mode."
+version = "1.1.0"
+description = "Lightning-fast OCR and QR code reader for Wayland/Linux. Tesseract by default, with optional AI-powered mode."
 readme = "README.md"
 requires-python = ">=3.8"
 authors = [{ name = "amebalabs", email = "team@amebalabs.com" }]
