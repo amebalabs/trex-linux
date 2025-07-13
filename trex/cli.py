@@ -11,6 +11,7 @@ from .capture import ScreenCapture
 from .clipboard import ClipboardManager
 from .config import Config
 from .utils import setup_logging
+from .url_utils import detect_urls, open_urls as open_detected_urls
 
 
 @click.command()
@@ -20,6 +21,7 @@ from .utils import setup_logging
 @click.option('-o', '--output', type=click.Choice(['clipboard', 'stdout']), default='clipboard', help='Output destination')
 @click.option('-d', '--debug', is_flag=True, help='Enable debug logging')
 @click.option('--accurate', is_flag=True, help='Use EasyOCR for better accuracy (slower)')
+@click.option('-u', '--open-urls', is_flag=True, help='Automatically open detected URLs in browser')
 def main(
     clipboard: bool,
     file: Optional[Path],
@@ -27,6 +29,7 @@ def main(
     output: str,
     debug: bool,
     accurate: bool,
+    open_urls: bool,
 ) -> None:
     """TRex - Text Recognition for Arch Linux / Hyprland
     
@@ -43,6 +46,10 @@ def main(
     # Override language if specified
     if language != 'en':
         cfg.config['language'] = language
+    
+    # Use config option as default for open_urls if not specified
+    if not open_urls and cfg.open_urls:
+        open_urls = True
     
     # Initialize clipboard manager early (lightweight)
     clipboard_mgr = ClipboardManager()
@@ -110,6 +117,12 @@ def main(
         if not text:
             click.echo("No text detected", err=True)
             sys.exit(1)
+            
+        # Detect and open URLs if requested
+        if open_urls:
+            urls = detect_urls(text)
+            if urls:
+                open_detected_urls(urls)
             
         # Output text
         if output == 'clipboard':

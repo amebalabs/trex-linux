@@ -15,7 +15,8 @@ class Config:
     DEFAULT_CONFIG = {
         "language": "en",
         "gpu": False,  # Default to CPU to avoid CUDA dependencies
-        "clipboard_timeout_ms": 5000
+        "clipboard_timeout_ms": 5000,
+        "open_urls": False  # Default to not opening URLs automatically
     }
     
     def __init__(self):
@@ -71,3 +72,8 @@ class Config:
     def clipboard_timeout_ms(self) -> int:
         """Get clipboard timeout in milliseconds"""
         return self.config.get('clipboard_timeout_ms', 5000)
+        
+    @property
+    def open_urls(self) -> bool:
+        """Get auto-open URLs setting"""
+        return self.config.get('open_urls', False)

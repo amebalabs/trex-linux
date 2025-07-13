@@ -17,6 +17,7 @@ Lightning-fast OCR tool optimized for Wayland/Hyprland on Arch Linux. Select scr
 - 🖥️ **Wayland Native** - Built for modern Linux desktops
 - 📋 **Clipboard Integration** - Automatically copies extracted text
 - 🎨 **Flexible** - Fast mode by default, --accurate flag for complex text
+- 🔗 **URL Detection** - Automatically detect and open URLs in extracted text
 
 ## Installation
 
@@ -53,6 +54,9 @@ trex -l deu
 
 # Use accurate mode for complex/handwritten text
 trex --accurate
+
+# Automatically open detected URLs in browser
+trex --open-urls
 ```
 
 ## Performance
@@ -81,11 +85,13 @@ Optional config file at `~/.config/trex/config.json`:
 ```json
 {
   "language": "en",
-  "gpu": false
+  "gpu": false,
+  "open_urls": false
 }
 ```
 
-Set `"gpu": true` if you have NVIDIA GPU with CUDA support.
+- Set `"gpu": true` if you have NVIDIA GPU with CUDA support
+- Set `"open_urls": true` to automatically open detected URLs by default
 
 ## Requirements
 
