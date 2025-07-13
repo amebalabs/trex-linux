@@ -18,8 +18,8 @@ Lightning-fast OCR tool optimized for Wayland/Hyprland on Arch Linux. Select scr
 
 ## Installation
 
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/trex-linux)](https://pypi.org/project/trex-linux/)
-[![PyPI - Format](https://img.shields.io/pypi/format/trex-linux)](https://pypi.org/project/trex-linux/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/trex-ocr)](https://pypi.org/project/trex-ocr/)
+[![PyPI - Format](https://img.shields.io/pypi/format/trex-ocr)](https://pypi.org/project/trex-ocr/)
 
 ```bash
 # Install system dependencies (Arch Linux)
