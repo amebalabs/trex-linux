@@ -10,13 +10,6 @@
 
 Lightning-fast OCR tool optimized for Wayland/Hyprland on Arch Linux. Select screen area → Extract text → Copy to clipboard.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/OCR-Tesseract-green?style=for-the-badge" alt="OCR: Tesseract">
-  <img src="https://img.shields.io/badge/OCR-EasyOCR-purple?style=for-the-badge" alt="OCR: EasyOCR">
-  <img src="https://img.shields.io/badge/Speed-Lightning%20Fast-yellow?style=for-the-badge" alt="Speed: Lightning Fast">
-  <img src="https://img.shields.io/badge/GPU-CUDA%20Ready-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="GPU: CUDA Ready">
-</p>
-
 ## Features
 
 - 🎯 **Simple** - One command to capture and extract text
