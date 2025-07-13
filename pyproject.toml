@@ -19,6 +19,7 @@ keywords = [
     "text-recognition",
     "fast-ocr",
     "clipboard",
+    "qr-code",
 ]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -38,7 +39,7 @@ classifiers = [
     "Environment :: GPU",
 ]
 
-dependencies = ["click>=8.0", "Pillow>=9.0", "numpy>=1.19.0"]
+dependencies = ["click>=8.0", "Pillow>=9.0", "numpy>=1.19.0", "opencv-python>=4.5", "pyzbar>=0.1.9"]
 
 [project.optional-dependencies]
 accurate = [

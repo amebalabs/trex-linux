@@ -16,7 +16,8 @@ class Config:
         "language": "en",
         "gpu": False,  # Default to CPU to avoid CUDA dependencies
         "clipboard_timeout_ms": 5000,
-        "open_urls": False  # Default to not opening URLs automatically
+        "open_urls": False,  # Default to not opening URLs automatically
+        "qr_mode": False  # Default to OCR mode, not QR code mode
     }
     
     def __init__(self):
@@ -77,3 +78,8 @@ class Config:
     def open_urls(self) -> bool:
         """Get auto-open URLs setting"""
         return self.config.get('open_urls', False)
+        
+    @property
+    def qr_mode(self) -> bool:
+        """Get QR code mode setting"""
+        return self.config.get('qr_mode', False)

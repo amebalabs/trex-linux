@@ -18,6 +18,7 @@ Lightning-fast OCR tool optimized for Wayland/Hyprland on Arch Linux. Select scr
 - 📋 **Clipboard Integration** - Automatically copies extracted text
 - 🎨 **Flexible** - Fast mode by default, --accurate flag for complex text
 - 🔗 **URL Detection** - Automatically detect and open URLs in extracted text
+- 📱 **QR Code Detection** - Decode QR codes automatically
 
 ## Installation
 
@@ -26,13 +27,13 @@ Lightning-fast OCR tool optimized for Wayland/Hyprland on Arch Linux. Select scr
 
 ```bash
 # Install system dependencies (Arch Linux)
-sudo pacman -S grim slurp wl-clipboard tesseract tesseract-data-eng
+sudo pacman -S grim slurp wl-clipboard tesseract tesseract-data-eng zbar
 
-# Install TRex (lightweight by default)
+# Install TRex
 pip install trex-ocr
 ```
 
-By default, TRex uses Tesseract for blazing-fast OCR. For better accuracy on complex images, install the accurate mode dependencies.
+TRex includes both text OCR (using Tesseract by default) and QR code reading out of the box.
 
 ## Usage
 
@@ -57,6 +58,12 @@ trex --accurate
 
 # Automatically open detected URLs in browser
 trex --open-urls
+
+# QR code mode - decode QR codes, fallback to OCR if none found
+trex --qr
+
+# Decode QR code and open if it's a URL
+trex --qr --open-urls
 ```
 
 ## Performance
@@ -74,7 +81,7 @@ trex --open-urls
 - `jpn` - Japanese
 - Install more: `sudo pacman -S tesseract-data-[lang]`
 
-**EasyOCR (--accurate mode)**: 
+**EasyOCR (--accurate mode)**:
 - `en`, `de`, `fr`, `es`, `ja`, `ko`, `ch_sim`, etc.
 - Full list: https://github.com/JaidedAI/EasyOCR#supported-languages
 
@@ -86,12 +93,14 @@ Optional config file at `~/.config/trex/config.json`:
 {
   "language": "en",
   "gpu": false,
-  "open_urls": false
+  "open_urls": false,
+  "qr_mode": false
 }
 ```
 
 - Set `"gpu": true` if you have NVIDIA GPU with CUDA support
 - Set `"open_urls": true` to automatically open detected URLs by default
+- Set `"qr_mode": true` to use QR code mode by default
 
 ## Requirements
 
@@ -105,7 +114,7 @@ Optional config file at `~/.config/trex/config.json`:
 For complex images, handwriting, or multiple languages:
 
 ```bash
-# Install accurate mode dependencies  
+# Install accurate mode dependencies
 pip install trex-ocr[accurate] --extra-index-url https://download.pytorch.org/whl/cpu
 
 # Or with GPU support (NVIDIA CUDA)
@@ -113,6 +122,7 @@ pip install trex-ocr[accurate,gpu]
 ```
 
 Then use `trex --accurate` for better accuracy at the cost of speed.
+
 
 ## License
 
