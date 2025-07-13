@@ -1,9 +1,9 @@
 # TRex - Text Recognition for Arch Linux
 
-[![PyPI version](https://badge.fury.io/py/trex-linux.svg)](https://badge.fury.io/py/trex-linux)
+[![PyPI version](https://badge.fury.io/py/trex-ocr.svg)](https://badge.fury.io/py/trex-ocr)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub](https://img.shields.io/badge/GitHub-amebalabs%2Ftrex--linux-black?logo=github)](https://github.com/amebalabs/trex-linux)
+[![GitHub](https://img.shields.io/badge/GitHub-amebalabs%2Ftrex--linux-black?logo=github)](https://github.com/amebalabs/trex-ocr)
 [![Platform: Linux](https://img.shields.io/badge/platform-Linux-lightgrey.svg)](https://www.linux.org/)
 [![Arch Linux](https://img.shields.io/badge/Arch%20Linux-1793D1?logo=arch-linux&logoColor=fff)](https://archlinux.org/)
 [![Wayland](https://img.shields.io/badge/Wayland-Native-orange.svg)](https://wayland.freedesktop.org/)
@@ -27,15 +27,15 @@ Lightning-fast OCR tool optimized for Wayland/Hyprland on Arch Linux. Select scr
 
 ## Installation
 
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/trex-linux)](https://pypi.org/project/trex-linux/)
-[![PyPI - Format](https://img.shields.io/pypi/format/trex-linux)](https://pypi.org/project/trex-linux/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/trex-ocr)](https://pypi.org/project/trex-ocr/)
+[![PyPI - Format](https://img.shields.io/pypi/format/trex-ocr)](https://pypi.org/project/trex-ocr/)
 
 ```bash
 # Install system dependencies (Arch Linux)
 sudo pacman -S grim slurp wl-clipboard tesseract tesseract-data-eng
 
 # Install TRex (lightweight by default)
-pip install trex-linux
+pip install trex-ocr
 ```
 
 By default, TRex uses Tesseract for blazing-fast OCR. For better accuracy on complex images, install the accurate mode dependencies.
@@ -107,10 +107,10 @@ For complex images, handwriting, or multiple languages:
 
 ```bash
 # Install accurate mode dependencies  
-pip install trex-linux[accurate] --extra-index-url https://download.pytorch.org/whl/cpu
+pip install trex-ocr[accurate] --extra-index-url https://download.pytorch.org/whl/cpu
 
 # Or with GPU support (NVIDIA CUDA)
-pip install trex-linux[accurate,gpu]
+pip install trex-ocr[accurate,gpu]
 ```
 
 Then use `trex --accurate` for better accuracy at the cost of speed.
